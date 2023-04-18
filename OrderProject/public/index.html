@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Orders</title>
+
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="/javascripts/main.js"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheets/index.css" >
+</head>
+
+<body>
+
+<h2> My Orders</h2>
+  
+<div >
+  <h2>Enter a new Order</h2>
+  Store ID <br />
+  <input type="text" value="" id="storeID" readonly="readonly"><br />
+  Sales Person ID <br />
+  <input type="text" value="" id="salesPersonID" readonly="readonly"/><br />
+  Cd ID<br />
+  <input type="text" value="" id="cdID" readonly="readonly"/><br />
+  Price Paid<br />
+  <input type="text" value="" id="pricePaid" readonly="readonly"/><br />
+  Time of purchase: <br />
+  <input type="text" value="" id="order-time" readonly="readonly"/>
+
+<br />
+<br />
+  
+  <input type="button" value="CREATE" id="buttonCreate" onclick="SetOrderValues()"/>
+  <input type="button" value="LOAD 500" id="buttonShowDb" onclick="createList()"/><br /><br />
+  <input type="button" value="SUBMIT-ONE" id="buttonSubmitOne" onclick="SubmitOne()" /><br /><br />
+  <input type="button" value="SUBMIT500" id="buttonSubmit500" onclick="Get500Orders()"/><br /><br />
+  <input type="button" value="Sort SalesID: 7 & 13, PricePaid between 6 and 14" id="buttonSortPriceSalesPerson" onclick="sortPriceSalesPerson()"/><br /><br />
+  <input type="button" value="See which store sold which CD between $10 to $15" id="buttonSortStoreCdPrice" onclick="sortStoreCdPrice()"/><br /><br />
+</div>
+
+
+<br />
+<br />
+<br />
+
+<h2>My Order List</h2>
+<div id="textString"> &nbsp &nbsp  &nbsp &nbsp ID: &nbsp &nbsp  &nbsp &nbsp StoreID: &nbsp &nbsp  &nbsp &nbsp  SalesPersonID: &nbsp  &nbsp &nbsp  &nbsp CdID:  &nbsp  &nbsp &nbsp  &nbsp PricePaid: &nbsp  &nbsp &nbsp  &nbsp Date:</div>
+<div id="divOrderList"></div>
+<br />
+
+<div>
+
+  <h2>Paste a order ID and click to delete</h2>
+  <input type="text" value="" id="deleteID" /> <br />
+  <input type="button" value="Delete Order" id="buttonDelete" />
+    
+</div>
+ 
+</body>
+
+</html>
